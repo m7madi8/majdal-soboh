@@ -1,0 +1,55 @@
+{
+  "name": "majdal-soboh-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Yoga Instructor Majdal Soboh",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/",
+    "dev": "live-server --port=3000 --open=/",
+    "build": "echo 'No build process needed for static site'",
+    "lint": "echo 'No linting configured'",
+    "test": "echo 'No tests configured'",
+    "deploy": "echo 'Deploy to your hosting service'"
+  },
+  "keywords": [
+    "portfolio",
+    "yoga",
+    "instructor",
+    "wellness",
+    "meditation",
+    "arabic",
+    "responsive",
+    "modern"
+  ],
+  "author": {
+    "name": "Mohammed Haroub",
+    "email": "contact@example.com",
+    "url": "https://example.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/majdal-soboh-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/majdal-soboh-portfolio/issues"
+  },
+  "homepage": "https://your-username.github.io/majdal-soboh-portfolio",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "config": {
+    "port": 3000
+  }
+} 
