@@ -28,13 +28,19 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Great+Vibes&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    </noscript>
     
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </noscript>
     
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
@@ -155,7 +161,7 @@
         <section class="about section" id="about" aria-labelledby="about-title">
             <div class="about-container container grid">
                 <div class="about-image" data-aos="fade-right">
-                    <img src="maj3.jpg" alt="Majdal Soboh teaching yoga to students" class="about-img">
+                    <img src="maj3.jpg" alt="Majdal Soboh teaching yoga to students" class="about-img" width="1000" height="750" loading="lazy" decoding="async">
                     <div class="experience-badge">
                         <span class="badge-number" aria-label="Over 5">5+</span>
                         <span class="badge-text">Years Experience</span>
@@ -292,7 +298,7 @@
 
                 <div class="gallery-grid" role="region" aria-label="Yoga gallery">
                     <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="maj1.jpg" alt="Morning yoga session with peaceful atmosphere" class="gallery-img">
+                        <img src="maj1.jpg" alt="Morning yoga session with peaceful atmosphere" class="gallery-img" width="1200" height="800" loading="lazy" decoding="async">
                         <figcaption class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Morning Yoga Session</h4>
@@ -302,7 +308,7 @@
                     </figure>
 
                     <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="maj2.jpg" alt="Meditation session in serene environment" class="gallery-img">
+                        <img src="maj2.jpg" alt="Meditation session in serene environment" class="gallery-img" width="1200" height="800" loading="lazy" decoding="async">
                         <figcaption class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Meditation Session</h4>
@@ -312,7 +318,7 @@
                     </figure>
 
                     <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="maj3.jpg" alt="Group yoga session with multiple participants" class="gallery-img">
+                        <img src="maj3.jpg" alt="Group yoga session with multiple participants" class="gallery-img" width="1200" height="800" loading="lazy" decoding="async">
                         <figcaption class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Group Session</h4>
@@ -495,7 +501,7 @@
     </a>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>
