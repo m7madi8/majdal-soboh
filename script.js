@@ -5,15 +5,11 @@ const navToggle = document.getElementById('nav-toggle');
 const navClose = document.getElementById('nav-close');
 const navLinks = document.querySelectorAll('.nav-link');
 const scrollTop = document.getElementById('scroll-top');
-const loadingScreen = document.getElementById('loadingScreen');
-const contactForm = document.getElementById('contactForm');
 
-// ===== LOADING SCREEN =====
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-    }, 1500);
-});
+const contactForm = document.getElementById('contactForm');
+const loadingScreenEl = document.getElementById('loadingScreen');
+
+
 
 // ===== HEADER SCROLL EFFECT =====
 window.addEventListener('scroll', () => {
@@ -30,6 +26,27 @@ window.addEventListener('scroll', () => {
         scrollTop.classList.remove('show');
     }
 });
+
+// ===== LOADER HIDE ON LOAD =====
+window.addEventListener('load', () => {
+    // Small delay for a smooth transition
+    setTimeout(() => {
+        if (loadingScreenEl) loadingScreenEl.classList.add('hidden');
+    }, 350);
+});
+
+// ===== SYNC CSS --header-height WITH REAL HEADER HEIGHT =====
+function updateHeaderHeightVar() {
+    if (!header) return;
+    const root = document.documentElement;
+    const headerPx = header.offsetHeight;
+    root.style.setProperty('--header-height', headerPx + 'px');
+}
+
+// Update on load and on resize/orientation change
+window.addEventListener('load', updateHeaderHeightVar);
+window.addEventListener('resize', updateHeaderHeightVar);
+window.addEventListener('orientationchange', updateHeaderHeightVar);
 
 // ===== MOBILE MENU TOGGLE =====
 if (navToggle) {
@@ -566,92 +583,9 @@ window.addEventListener('error', (e) => {
             showNotification('An error occurred in the application. Please refresh the page.', 'error');
 });
 
-// ===== SERVICE WORKER REGISTRATION (FOR PWA) =====
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-                
-                // Check for updates
-                registration.addEventListener('updatefound', () => {
-                    const newWorker = registration.installing;
-                    newWorker.addEventListener('statechange', () => {
-                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                            // New content is available
-                                                                    showNotification('Website updated! Refresh the page to get the latest updates.', 'info');
-                        }
-                    });
-                });
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}
 
-// ===== PWA INSTALL PROMPT =====
-let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    
-    // Show install button or notification
-    showInstallPrompt();
-});
 
-function showInstallPrompt() {
-    const installButton = document.createElement('button');
-    installButton.className = 'btn btn-primary install-btn';
-                    installButton.innerHTML = '<i class="bx bx-download"></i> Install App';
-    installButton.style.cssText = `
-        position: fixed;
-        bottom: 2rem;
-        left: 2rem;
-        z-index: 1000;
-        animation: slideIn 0.3s ease;
-    `;
-    
-    installButton.addEventListener('click', () => {
-        installButton.style.display = 'none';
-        deferredPrompt.prompt();
-        
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the install prompt');
-            } else {
-                console.log('User dismissed the install prompt');
-            }
-            deferredPrompt = null;
-        });
-    });
-    
-    document.body.appendChild(installButton);
-    
-    // Auto-hide after 10 seconds
-    setTimeout(() => {
-        if (installButton.parentNode) {
-            installButton.style.animation = 'slideOut 0.3s ease';
-            setTimeout(() => installButton.remove(), 300);
-        }
-    }, 10000);
-}
-
-// Add CSS animations for install button
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from { transform: translateX(-100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    
-    @keyframes slideOut {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(-100%); opacity: 0; }
-    }
-`;
-document.head.appendChild(style);
 
 // ===== EXPORT FOR MODULE USE =====
 if (typeof module !== 'undefined' && module.exports) {

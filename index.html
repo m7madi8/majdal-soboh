@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Majdal Soboh - Certified Yoga Instructor & Wellness Coach">
-    <meta name="keywords" content="yoga, meditation, wellness, fitness, instructor, Majdal Soboh, certified yoga instructor, wellness coach">
+    <meta name="description" content="Majdal Soboh - Certified Yoga Instructor & Wellness Coach. Transform your life through yoga, meditation, and mindfulness practices. Book your session today.">
+    <meta name="keywords" content="yoga, meditation, wellness, fitness, instructor, Majdal Soboh, certified yoga instructor, wellness coach, mindfulness, yoga classes, meditation sessions">
     <meta name="author" content="Majdal Soboh">
-    
-    <!-- PWA Meta Tags -->
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2E8B57">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Majdal Yoga">
-    <meta name="msapplication-TileColor" content="#2E8B57">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Majdal Soboh - Certified Yoga Instructor & Wellness Coach">
+    <meta property="og:description" content="Transform your life through yoga, meditation, and mindfulness practices. Book your session today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://majdalyoga.com">
+    <meta property="og:image" content="maj1.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Majdal Soboh - Certified Yoga Instructor">
+    <meta name="twitter:description" content="Transform your life through yoga, meditation, and mindfulness practices.">
+    <meta name="twitter:image" content="maj1.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘‍♀️</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘‍♀️</text></svg>">
-    <link rel="manifest" href="/manifest.json">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,66 +42,67 @@
     <title>Majdal Soboh </title>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loader">
-            <div class="yoga-pose">🧘‍♀️</div>
-            <div class="loading-text">جاري التحميل...</div>
-        </div>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Loading Screen (text-only) -->
+    <div class="loading-screen" id="loadingScreen" role="status" aria-live="polite" aria-label="Loading">
+        <div class="loader-brand" aria-hidden="false">Majdal Soboh</div>
     </div>
+    
+
 
     <!-- Header -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-icon">🧘‍♀️</span>
+    <header class="header" id="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <a href="#home" class="nav-logo" aria-label="Majdal Soboh - Home">
+                <span class="logo-icon" aria-hidden="true">🧘‍♀️</span>
                 <span class="logo-text">Majdal<span>Soboh</span></span>
             </a>
 
             <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link active-link">Home</a>
+                <ul class="nav-list" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="#home" class="nav-link active-link" role="menuitem" aria-current="page">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                    <li class="nav-item" role="none">
+                        <a href="#about" class="nav-link" role="menuitem">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link">Services</a>
+                    <li class="nav-item" role="none">
+                        <a href="#services" class="nav-link" role="menuitem">Services</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#gallery" class="nav-link">Gallery</a>
+                    <li class="nav-item" role="none">
+                        <a href="#gallery" class="nav-link" role="menuitem">Gallery</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <li class="nav-item" role="none">
+                        <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
+                    <li class="nav-item" role="none">
+                        <a href="#contact" class="nav-link" role="menuitem">Contact</a>
                     </li>
                 </ul>
 
-                <div class="nav-close" id="nav-close">
-                    <i class='bx bx-x'></i>
-                </div>
+                <button class="nav-close" id="nav-close" aria-label="Close navigation menu">
+                    <i class='bx bx-x' aria-hidden="true"></i>
+                </button>
             </div>
 
             <div class="nav-btns">
-                <a href="#contact" class="btn btn-primary">Start Your Journey</a>
-                <div class="nav-toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <i class='bx bx-menu' aria-hidden="true"></i>
+                </button>
             </div>
         </nav>
     </header>
 
     <!-- Main -->
-    <main class="main">
+    <main class="main" id="main" role="main">
         <!-- Home Section -->
-        <section class="home section" id="home">
+        <section class="home section" id="home" aria-labelledby="home-title">
             <div class="home-container container grid">
                 <div class="home-content" data-aos="fade-right">
                     <span class="home-subtitle">Welcome to the World of Yoga</span>
-                    <h1 class="home-title">
+                    <h1 class="home-title" id="home-title">
                         I'm <span class="gradient-text">Majdal Soboh</span>
                         <br>Certified Yoga Instructor
                     </h1>
@@ -105,80 +111,60 @@
                         Through yoga and meditation, we focus on enhancing your flexibility, building your strength, and nourishing your mind.
                     </p>
                     
-                    <div class="home-stats">
+                    <div class="home-stats" role="region" aria-label="Achievement statistics">
                         <div class="stat-item">
-                            <span class="stat-number">500+</span>
+                            <span class="stat-number" aria-label="Over 500">500+</span>
                             <span class="stat-text">Happy Clients</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number" aria-label="Over 5">5+</span>
                             <span class="stat-text">Years Experience</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">1000+</span>
+                            <span class="stat-number" aria-label="Over 1000">1000+</span>
                             <span class="stat-text">Training Sessions</span>
                         </div>
                     </div>
 
                     <div class="home-btns">
                         <a href="#contact" class="btn btn-primary">
-                            <i class='bx bx-calendar'></i>
+                            <i class='bx bx-calendar' aria-hidden="true"></i>
                             Book Session
                         </a>
                         <a href="#about" class="btn btn-outline">
-                            <i class='bx bx-play'></i>
+                            <i class='bx bx-play' aria-hidden="true"></i>
                             Learn More
                         </a>
                     </div>
 
-                    <div class="home-social">
-                        <a href="https://www.instagram.com/majdals" target="_blank" class="social-link">
-                            <i class='bx bxl-instagram'></i>
+                    <div class="home-social" role="region" aria-label="Social media links">
+                        <a href="https://www.instagram.com/majdals" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Instagram">
+                            <i class='bx bxl-instagram' aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.facebook.com/share/19juJQdM96/" target="_blank" class="social-link">
-                            <i class='bx bxl-facebook-circle'></i>
+                        <a href="https://www.facebook.com/share/19juJQdM96/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Facebook">
+                            <i class='bx bxl-facebook-circle' aria-hidden="true"></i>
                         </a>
-                        <a href="https://linktr.ee/majdalyoga" target="_blank" class="social-link">
-                            <i class='bx bx-link'></i>
+                        <a href="https://linktr.ee/majdalyoga" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Linktree">
+                            <i class='bx bx-link' aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-
-                <div class="home-image" data-aos="fade-left">
-                    <div class="image-container">
-                        <img src="maj1.jpg" alt="Majdal Soboh - Yoga Instructor" class="home-img">
-                        <div class="floating-card">
-                            <div class="card-icon">🧘‍♀️</div>
-                            <div class="card-content">
-                                <h4>Free Trial Session</h4>
-                                <p>Get a free yoga session</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-down">
-                <a href="#about" class="scroll-link">
-                    <i class='bx bx-chevron-down'></i>
-                </a>
-            </div>
         </section>
 
         <!-- About Section -->
-        <section class="about section" id="about">
+        <section class="about section" id="about" aria-labelledby="about-title">
             <div class="about-container container grid">
                 <div class="about-image" data-aos="fade-right">
-                    <img src="maj3.jpg" alt="Majdal Soboh Teaching Yoga" class="about-img">
+                    <img src="maj3.jpg" alt="Majdal Soboh teaching yoga to students" class="about-img">
                     <div class="experience-badge">
-                        <span class="badge-number">5+</span>
+                        <span class="badge-number" aria-label="Over 5">5+</span>
                         <span class="badge-text">Years Experience</span>
                     </div>
                 </div>
 
                 <div class="about-content" data-aos="fade-left">
                     <span class="section-subtitle">About Me</span>
-                    <h2 class="section-title">
+                    <h2 class="section-title" id="about-title">
                         My Passion for Yoga <span class="gradient-text">& Inner Peace</span>
                     </h2>
                     
@@ -188,10 +174,10 @@
                         between body and mind, enhance your mental health, and reduce daily stress.
                     </p>
 
-                    <div class="about-features">
+                    <div class="about-features" role="region" aria-label="About features">
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class='bx bx-certification'></i>
+                                <i class='bx bx-certification' aria-hidden="true"></i>
                             </div>
                             <div class="feature-content">
                                 <h4>Certified Instructor</h4>
@@ -201,7 +187,7 @@
                         
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class='bx bx-heart'></i>
+                                <i class='bx bx-heart' aria-hidden="true"></i>
                             </div>
                             <div class="feature-content">
                                 <h4>Personal Approach</h4>
@@ -211,7 +197,7 @@
                         
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <i class='bx bx-meditation'></i>
+                                <i class='bx bx-meditation' aria-hidden="true"></i>
                             </div>
                             <div class="feature-content">
                                 <h4>Meditation & Awareness</h4>
@@ -221,7 +207,7 @@
                     </div>
 
                     <a href="#contact" class="btn btn-primary">
-                        <i class='bx bx-message-rounded'></i>
+                        <i class='bx bx-message-rounded' aria-hidden="true"></i>
                         Contact Me
                     </a>
                 </div>
@@ -229,11 +215,11 @@
         </section>
 
         <!-- Services Section -->
-        <section class="services section" id="services">
+        <section class="services section" id="services" aria-labelledby="services-title">
             <div class="services-container container">
                 <div class="services-header" data-aos="fade-up">
                     <span class="section-subtitle">My Services</span>
-                    <h2 class="section-title">
+                    <h2 class="section-title" id="services-title">
                         How I Can <span class="gradient-text">Help You</span>
                     </h2>
                     <p class="section-description">
@@ -241,140 +227,139 @@
                     </p>
                 </div>
 
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="services-grid" role="region" aria-label="Yoga services">
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-icon">
-                            <i class='bx bx-user'></i>
+                            <i class='bx bx-user' aria-hidden="true"></i>
                         </div>
                         <h3 class="service-title">Individual Sessions</h3>
                         <p class="service-description">
                             Personalized yoga sessions tailored to your needs and goals, with focus on breathing techniques and meditation.
                         </p>
                         <ul class="service-features">
-                            <li><i class='bx bx-check'></i> Customized Program</li>
-                            <li><i class='bx bx-check'></i> Flexible Scheduling</li>
-                            <li><i class='bx bx-check'></i> Continuous Support</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Customized Program</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Flexible Scheduling</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Continuous Support</li>
                         </ul>
                         <a href="#contact" class="service-btn">Book Now</a>
-                    </div>
+                    </article>
 
-                    <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <article class="service-card featured" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-badge">Most Popular</div>
                         <div class="service-icon">
-                            <i class='bx bx-group'></i>
+                            <i class='bx bx-group' aria-hidden="true"></i>
                         </div>
                         <h3 class="service-title">Group Sessions</h3>
                         <p class="service-description">
                             Group yoga sessions in an inspiring and supportive environment, suitable for all levels.
                         </p>
                         <ul class="service-features">
-                            <li><i class='bx bx-check'></i> Motivating Group Atmosphere</li>
-                            <li><i class='bx bx-check'></i> Affordable Prices</li>
-                            <li><i class='bx bx-check'></i> Variety of Exercises</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Motivating Group Atmosphere</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Affordable Prices</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Variety of Exercises</li>
                         </ul>
                         <a href="#contact" class="service-btn">Book Now</a>
-                    </div>
+                    </article>
 
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-icon">
-                            <i class='bx bx-brain'></i>
+                            <i class='bx bx-brain' aria-hidden="true"></i>
                         </div>
                         <h3 class="service-title">Meditation Sessions</h3>
                         <p class="service-description">
                             Customized meditation sessions to improve mental health and reduce stress and anxiety.
                         </p>
                         <ul class="service-features">
-                            <li><i class='bx bx-check'></i> Various Techniques</li>
-                            <li><i class='bx bx-check'></i> Short Sessions</li>
-                            <li><i class='bx bx-check'></i> Immediate Results</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Various Techniques</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Short Sessions</li>
+                            <li><i class='bx bx-check' aria-hidden="true"></i> Immediate Results</li>
                         </ul>
                         <a href="#contact" class="service-btn">Book Now</a>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
-        <section class="gallery section" id="gallery">
+        <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
             <div class="gallery-container container">
                 <div class="gallery-header" data-aos="fade-up">
                     <span class="section-subtitle">Photo Gallery</span>
-                    <h2 class="section-title">
+                    <h2 class="section-title" id="gallery-title">
                         Special <span class="gradient-text">Moments</span>
                     </h2>
                 </div>
 
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="maj1.jpg" alt="Yoga Session" class="gallery-img">
-                        <div class="gallery-overlay">
+                <div class="gallery-grid" role="region" aria-label="Yoga gallery">
+                    <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="maj1.jpg" alt="Morning yoga session with peaceful atmosphere" class="gallery-img">
+                        <figcaption class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Morning Yoga Session</h4>
                                 <p>Starting a day full of energy and peace</p>
                             </div>
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="maj2.jpg" alt="Meditation Session" class="gallery-img">
-                        <div class="gallery-overlay">
+                    <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="maj2.jpg" alt="Meditation session in serene environment" class="gallery-img">
+                        <figcaption class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Meditation Session</h4>
                                 <p>Exploring inner peace</p>
                             </div>
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
 
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="maj3.jpg" alt="Group Yoga" class="gallery-img">
-                        <div class="gallery-overlay">
+                    <figure class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="maj3.jpg" alt="Group yoga session with multiple participants" class="gallery-img">
+                        <figcaption class="gallery-overlay">
                             <div class="gallery-content">
                                 <h4>Group Session</h4>
                                 <p>Sharing positive energy</p>
                             </div>
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
-
         <!-- Contact Section -->
-        <section class="contact section" id="contact">
+        <section class="contact section" id="contact" aria-labelledby="contact-title">
             <div class="contact-container container grid">
                 <div class="contact-content" data-aos="fade-right">
                     <span class="section-subtitle">Contact Me</span>
-                    <h2 class="section-title">
+                    <h2 class="section-title" id="contact-title">
                         Start Your <span class="gradient-text">Journey</span> with Yoga
                     </h2>
                     <p class="contact-description">
                         Book a yoga or meditation session with me and start your journey towards inner peace and overall wellness.
                     </p>
 
-                    <div class="contact-info">
+                    <div class="contact-info" role="region" aria-label="Contact information">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class='bx bx-phone'></i>
+                                <i class='bx bx-phone' aria-hidden="true"></i>
                             </div>
                             <div class="contact-details">
                                 <h4>Call Me</h4>
-                                <span>+970 59 123 4567</span>
+                                <a href="tel:+970591234567" aria-label="Call +970 59 123 4567">+970 59 123 4567</a>
                             </div>
                         </div>
 
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class='bx bx-envelope'></i>
+                                <i class='bx bx-envelope' aria-hidden="true"></i>
                             </div>
                             <div class="contact-details">
                                 <h4>Email Me</h4>
-                                <span>majdal@yoga.com</span>
+                                <a href="mailto:majdal@yoga.com" aria-label="Email majdal@yoga.com">majdal@yoga.com</a>
                             </div>
                         </div>
 
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class='bx bx-map'></i>
+                                <i class='bx bx-map' aria-hidden="true"></i>
                             </div>
                             <div class="contact-details">
                                 <h4>My Location</h4>
@@ -383,35 +368,40 @@
                         </div>
                     </div>
 
-                    <div class="contact-social">
-                        <a href="https://www.instagram.com/majdals" target="_blank" class="social-link">
-                            <i class='bx bxl-instagram'></i>
+                    <div class="contact-social" role="region" aria-label="Social media links">
+                        <a href="https://www.instagram.com/majdals" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Instagram">
+                            <i class='bx bxl-instagram' aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.facebook.com/share/19juJQdM96/" target="_blank" class="social-link">
-                            <i class='bx bxl-facebook-circle'></i>
+                        <a href="https://www.facebook.com/share/19juJQdM96/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Facebook">
+                            <i class='bx bxl-facebook-circle' aria-hidden="true"></i>
                         </a>
-                        <a href="https://linktr.ee/majdalyoga" target="_blank" class="social-link">
-                            <i class='bx bx-link'></i>
+                        <a href="https://linktr.ee/majdalyoga" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Linktree">
+                            <i class='bx bx-link' aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="contact-form-container" data-aos="fade-left">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" role="form" aria-labelledby="contact-form-title">
+                        <h3 id="contact-form-title" class="visually-hidden">Contact Form</h3>
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Full Name" required class="form-input">
+                            <label for="name" class="visually-hidden">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full Name" required class="form-input" aria-required="true">
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email Address" required class="form-input">
+                            <label for="email" class="visually-hidden">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" required class="form-input" aria-required="true">
                         </div>
                         
                         <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number" required class="form-input">
+                            <label for="phone" class="visually-hidden">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required class="form-input" aria-required="true">
                         </div>
                         
                         <div class="form-group">
-                            <select name="service" required class="form-input">
+                            <label for="service" class="visually-hidden">Select Service</label>
+                            <select id="service" name="service" required class="form-input" aria-required="true">
                                 <option value="">Select Service</option>
                                 <option value="individual">Individual Session</option>
                                 <option value="group">Group Session</option>
@@ -420,11 +410,12 @@
                         </div>
                         
                         <div class="form-group">
-                            <textarea name="message" placeholder="Your Message (Optional)" rows="5" class="form-input"></textarea>
+                            <label for="message" class="visually-hidden">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message (Optional)" rows="5" class="form-input"></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-full">
-                            <i class='bx bx-send'></i>
+                            <i class='bx bx-send' aria-hidden="true"></i>
                             Send Message
                         </button>
                     </form>
@@ -434,12 +425,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-container container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <span class="logo-icon">🧘‍♀️</span>
+                        <span class="logo-icon" aria-hidden="true">🧘‍♀️</span>
                         <span class="logo-text">Majdal<span>Soboh</span></span>
                     </div>
                     <p class="footer-description">
@@ -447,7 +438,7 @@
                     </p>
                 </div>
 
-                <div class="footer-links">
+                <nav class="footer-links" role="navigation" aria-label="Footer navigation">
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-list">
                         <li><a href="#home" class="footer-link">Home</a></li>
@@ -456,31 +447,21 @@
                         <li><a href="#gallery" class="footer-link">Gallery</a></li>
                         <li><a href="#contact" class="footer-link">Contact</a></li>
                     </ul>
-                </div>
-
-                <div class="footer-services">
-                    <h3 class="footer-title">My Services</h3>
-                    <ul class="footer-list">
-                        <li><a href="#services" class="footer-link">Individual Sessions</a></li>
-                        <li><a href="#services" class="footer-link">Group Sessions</a></li>
-                        <li><a href="#services" class="footer-link">Meditation Sessions</a></li>
-                        <li><a href="#services" class="footer-link">Custom Programs</a></li>
-                    </ul>
-                </div>
+                </nav>
 
                 <div class="footer-contact">
                     <h3 class="footer-title">Contact Me</h3>
                     <div class="footer-contact-info">
                         <div class="contact-item">
-                            <i class='bx bx-phone'></i>
-                            <span>+970 59 123 4567</span>
+                            <i class='bx bx-phone' aria-hidden="true"></i>
+                            <a href="tel:+970591234567" aria-label="Call +970 59 123 4567">+970 59 123 4567</a>
                         </div>
                         <div class="contact-item">
-                            <i class='bx bx-envelope'></i>
-                            <span>majdal@yoga.com</span>
+                            <i class='bx bx-envelope' aria-hidden="true"></i>
+                            <a href="mailto:majdal@yoga.com" aria-label="Email majdal@yoga.com">majdal@yoga.com</a>
                         </div>
                         <div class="contact-item">
-                            <i class='bx bx-map'></i>
+                            <i class='bx bx-map' aria-hidden="true"></i>
                             <span>Ramallah, Palestine</span>
                         </div>
                     </div>
@@ -488,20 +469,20 @@
             </div>
 
             <div class="footer-bottom">
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/majdals" target="_blank" class="social-link">
-                        <i class='bx bxl-instagram'></i>
+                <div class="footer-social" role="region" aria-label="Social media links">
+                    <a href="https://www.instagram.com/majdals" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Instagram">
+                        <i class='bx bxl-instagram' aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.facebook.com/share/19juJQdM96/" target="_blank" class="social-link">
-                        <i class='bx bxl-facebook-circle'></i>
+                    <a href="https://www.facebook.com/share/19juJQdM96/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Follow on Facebook">
+                        <i class='bx bxl-facebook-circle' aria-hidden="true"></i>
                     </a>
-                    <a href="https://linktr.ee/majdalyoga" target="_blank" class="social-link">
-                        <i class='bx bx-link'></i>
+                    <a href="https://linktr.ee/majdalyoga" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit Linktree">
+                        <i class='bx bx-link' aria-hidden="true"></i>
                     </a>
                 </div>
                 
                 <p class="footer-copyright">
-                    All Rights Reserved © 2024 Majdal Soboh. Developed by 
+                    All Rights Reserved © 2025 Majdal Soboh. Developed by 
                     <a href="#" class="developer-link">Mohammed Haroub</a>
                 </p>
             </div>
@@ -509,8 +490,8 @@
     </footer>
 
     <!-- Scroll to Top -->
-    <a href="#home" class="scroll-top" id="scroll-top">
-        <i class='bx bx-chevron-up'></i>
+    <a href="#home" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class='bx bx-chevron-up' aria-hidden="true"></i>
     </a>
 
     <!-- Scripts -->
